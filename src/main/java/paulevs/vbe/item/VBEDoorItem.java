@@ -21,7 +21,7 @@ public class VBEDoorItem extends TemplateDoorItem {
 	private final DoorBlock door;
 	
 	public VBEDoorItem(Identifier id, DoorBlock door) {
-		super(id, Material.WOOD);
+		super(id, Material.WOOD, door);
 		setTranslationKey(id);
 		this.door = door;
 	}
