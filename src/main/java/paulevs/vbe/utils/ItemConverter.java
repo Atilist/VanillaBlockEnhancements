@@ -15,9 +15,9 @@ public class ItemConverter {
 	
 	public static int getID(int itemId, int damage) {
 		Item item = null;
-		if (itemId == Block.STONE_SLAB.asItem().id && VBE.ENHANCED_SLABS.getValue()) item = VBEBlocks.getHalfSlabByMeta(damage).asItem();
-		if (itemId == Block.LOG.asItem().id) item = VBEBlocks.getLogByMeta(damage).asItem();
-		if (itemId == Block.LEAVES.asItem().id) item = VBEBlocks.getLeavesByMeta(damage).asItem();
+		if (Block.STONE_SLAB.asItem() != null && itemId == Block.STONE_SLAB.asItem().id && VBE.ENHANCED_SLABS.getValue()) item = VBEBlocks.getHalfSlabByMeta(damage).asItem();
+		if (Block.LOG.asItem() != null && itemId == Block.LOG.asItem().id) item = VBEBlocks.getLogByMeta(damage).asItem();
+		if (Block.LEAVES.asItem() != null && itemId == Block.LEAVES.asItem().id) item = VBEBlocks.getLeavesByMeta(damage).asItem();
 		if (itemId == Item.woodDoor.id) item = VBEItems.OAK_DOOR.asItem();
 		if (itemId == Item.ironDoor.id) item = VBEItems.IRON_DOOR.asItem();
 		return item == null ? -1 : item.id;
